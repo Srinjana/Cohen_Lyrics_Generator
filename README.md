@@ -21,6 +21,31 @@ Here I will do a thorough run-down of all the steps I followed to reach my desir
 ### Rate of Accuracy : 69-70%
 * After training the Neural Network is fed with some Seed Text and is allowed to generate its own lyrics upto Hundred next words.
 
+## Input Fed:
+```
+"You were my reason"
+```
+## Output Lyrics:
+```
+
+" You were my reason
+it was before
+it was before
+it was before
+going to do my lip
+you're all to the last
+you're of song i know
+it was trouble an altar shivering shivering around into into his skin
+of us turned well on go crazy our kisses too became
+been dying spark sand eye around from her mirror twin soon every night
+that strong soon must be back on again about on the before
+soon be sailors into his fiery flare and her eye around school
+disregard her mirror and death by surprise them
+here car has been working out of world "
+
+```
+I'd say that's not half as bad as I thought it'd be. :)
+
 ## Necessary Packages:
 ```
 import tensorflow as tf
