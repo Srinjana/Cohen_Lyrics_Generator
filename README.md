@@ -6,7 +6,14 @@ The [Original Dataset](https://www.kaggle.com/paultimothymooney/poetry?select=le
 Although I added a few more of his lyrics to it. The updated dataset is available as `leonard_cohen.txt`
 
 ## Working Concepts:
-Here I will do a thorough run-down of all the steps I followed to reach my desired output. 
+
+### This diagram explains the basic concept of "HOW RNN WORKS ?"
+
+![UNDERSTAND RNN WITH THIS FIGURE](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/10/1-33-768x287.png)
+
+---
+
+### Here I will do a thorough run-down of all the steps I followed to reach my desired output:~
 * Firstly the necessary packages are imported and the training dataset is read line by line.
 * Each word in the line is assigned an index. This index is known as a <b> `Token` </b>. Every new word that appears is assigned a new token.
 * An extra token is also assigned for Out of Vocabulary words.
@@ -17,8 +24,14 @@ Here I will do a thorough run-down of all the steps I followed to reach my desir
 * The Model is Embedded with a Dense Neural Network and a Bidirectional LSTM is used in order to be able to generate the next probable word.
 * Loses are hot encoded using `categorical-crossentropy` and `Adam` Optimizer is used.
 * The model fits the Xs and Ys for Hundred epochs and checks the `accuracy` metric.
+
+ ![](ss/epochs.png)
+
 * A graph is plotted to obtain the rate of accuracy.
 ### Rate of Accuracy : 69-70%
+
+![](ss/graphs.png)
+
 * After training the Neural Network is fed with some Seed Text and is allowed to generate its own lyrics upto Hundred next words.
 
 ## Input Fed:
@@ -58,6 +71,10 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.layers import Embedding, LSTM, Dense, Bidirectional
 ```
+## Files:
+
+* `lyr_generation.py   =  PYTHON FILE`
+* `lyric_gen.ipynb    = JUPYTER NOTEBOOK FILE`
 
 ---
 Find the video Explaining the technologies used [here](https://www.youtube.com/watch?v=ZMudJXhsUpY)
